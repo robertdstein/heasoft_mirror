@@ -1,2 +1,2 @@
 # heasoft_mirror
-Docjer mirror of heasoft
+Docker mirror of heasoft
