@@ -21,7 +21,7 @@ on:
 env:
   REGISTRY_IMAGE: robertdstein/heasoft
   VERSION: 6.35.1
-  FILE_SUFFIX: docker1.01.tar
+  FILE_SUFFIX: docker1.01
 
 jobs:
   push_to_registry:
@@ -37,9 +37,8 @@ jobs:
 #        uses: actions/checkout@v4
       - name: Download the code
         run: |
-          echo heasoft-${{ env.VERSION }}${{ env.FILE_SUFFIX }}
-          wget https://heasarc.gsfc.nasa.gov/FTP/software/lheasoft/release/heasoft-${{ env.VERSION }}${{ env.FILE_SUFFIX }}
-          tar -xf heasoft-${{ env.VERSION }}${{ env.FILE_SUFFIX }}
+          wget https://heasarc.gsfc.nasa.gov/FTP/software/lheasoft/release/heasoft-${{ env.VERSION }}${{ env.FILE_SUFFIX }}.tar
+          tar -xf heasoft-${{ env.VERSION }}${{ env.FILE_SUFFIX }}.tar
           echo "HEASOFT version: ${{ env.VERSION }}"
           echo ls heasoft-${{ env.VERSION }}${{ env.FILE_SUFFIX }}
 #        run
