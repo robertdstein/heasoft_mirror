@@ -38,7 +38,7 @@ jobs:
       - name: Download the code
         run: |
           wget https://heasarc.gsfc.nasa.gov/FTP/software/lheasoft/release/heasoft-${{ env.VERSION }}${{ env.FILE_SUFFIX }}.tar
-          tar xzf heasoft-${{ env.VERSION }}${{ env.FILE_SUFFIX }}.tar
+          tar xf heasoft-${{ env.VERSION }}${{ env.FILE_SUFFIX }}.tar
           echo "HEASOFT version: ${{ env.VERSION }}"
 
       - name: Log in to Docker Hub
